@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="static/bbb.css">
+	<title>My FlaskAPP</title>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+</head>
+<body text-align="center" style="background-color: #98A9E9">
+	<style type="text/css">
+	div {font-family: "Lato", sans-serif}
+	a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+		}
+
+	a:hover, a:active {
+    	background-color: red;
+	}
+	</style>
+	{%if session.logged_in %}
+	<button><a href = "/logout">LOGOUT</a></button>
+	{% else %}
+		<button><a href = "/login">LOGIN</a></button>
+
+	{% endif %}
+
+	{% block body %}
+	{% endblock %}
+
+<script type="text/javascript" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
